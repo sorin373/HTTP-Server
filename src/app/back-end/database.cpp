@@ -16,7 +16,7 @@ namespace ws_app::__detail
             strcpy(this->m_schema, schema);
 
             this->m_driver = sql::mysql::get_mysql_driver_instance();
-            this->m_connection = m_driver->connect(connection_name, username, password);
+            this->m_connection = this->m_driver->connect(connection_name, username, password);
 
             if (this->m_connection == nullptr)
                 return -1;

@@ -125,7 +125,7 @@ namespace net
             return HTTP_STATUS::BAD_REQUEST;
 
         // bytes + 1 in order to make room for nullptr
-        char *cbuff = static_cast<char *>(malloc((bytes_in + 1) * sizeof(char)));
+        char *cbuff = static_cast<char*>(malloc((bytes_in + 1) * sizeof(char)));
 
         strncpy(cbuff, buffer, bytes_in);
         cbuff[bytes_in] = '\0';
